@@ -4,7 +4,15 @@
             "name": "uaa.user",
             "description": "UAA"
         }
- 
+        ,
+        {
+            "name": "$XSAPPNAME-$XSSPACE.Viewer",
+            "description": "Viewer"
+        },
+        {
+            "name": "$XSAPPNAME-$XSSPACE.Admin",
+            "description": "Administrator"
+        }
     ],
     "role-templates": [
         {
@@ -14,7 +22,38 @@
                 "uaa.user"
             ]
         }
-
+        ,
+        {
+            "name": "Viewer",
+            "description": "Viewer",
+            "scope-references": [
+                "$XSAPPNAME-$XSSPACE.Viewer"
+            ]
+        },
+        {
+            "name": "Admin",
+            "description": "Administrator",
+            "scope-references": [
+                "$XSAPPNAME-$XSSPACE.Admin"
+            ]
+        }
+    ]
+    ,
+    "role-collections": [
+        {
+            "name": "devopsdev_Viewer",
+            "description": "Viewing access",
+            "role-template-references": [
+                "$XSAPPNAME-$XSSPACE.Viewer"
+            ]
+        },
+        {
+            "name": "devopsdev_Administrator",
+            "description": "Administrative access",
+            "role-template-references": [
+                "$XSAPPNAME-$XSSPACE.Admin"
+            ]
+        }
     ]
     ,
     "oauth2-configuration": {
