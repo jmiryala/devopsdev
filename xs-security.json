@@ -1,5 +1,5 @@
 {
-    "xsappname": "devopsdev",
+    "xsappname": "devopsdev-${space}",
     "tenant-mode": "dedicated",
     "scopes": [
         {
