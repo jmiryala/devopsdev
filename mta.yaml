@@ -94,6 +94,9 @@ resources:
       service: xsuaa
       service-plan: application
       path: ./xs-security.json
+      config:
+        xsappname: devopsdev-${space}
+        tenant-mode: dedicated
 
   # -------------------- DESTINATION SERVICE -------------------
   - name: devopsdev-dest

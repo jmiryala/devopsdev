@@ -1,6 +1,4 @@
 {
-    "xsappname": "devopsdev-${space}",
-    "tenant-mode": "dedicated",
     "scopes": [
         {
             "name": "uaa.user",
